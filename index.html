@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abishek Kandel - IT . Networking . Python</title>
+<meta name="description" content="Abishek Kandel - Networking-focused IT student in Darwin, NT, building on Cisco networking with Python and Django.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="noise"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">Abishek Kandel<span class="brand-dot">.</span></a>
+    <nav class="nav">
+      <a href="#project">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-ghost nav-cta">Get in touch</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Networking-focused IT student - Darwin, NT</p>
+        <h1>I design networks.<br>Then I write the <span class="accent">code</span><br>that supports them.</h1>
+        <p class="hero-lead">
+          Bachelor of IT student at Charles Darwin University, currently
+          preparing for the CCNA 200-301. Networking is where I focus -
+          VLANs, routing, redundancy, and security. I also know Python and
+          Django, and I'd love to bring the two together through network
+          automation.
+        </p>
+        <div class="hero-actions">
+          <a href="#project" class="btn btn-primary">See my network build</a>
+          <a href="/resume.pdf" class="btn btn-outline" download>Download resume</a>
+        </div>
+      </div>
+
+      <div class="hero-diagram">
+        <svg viewBox="0 0 420 420" class="topology" role="img" aria-label="Diagram connecting Abhi to Networking, Python, and IT Support">
+          <line x1="210" y1="210" x2="210" y2="70" class="link" />
+          <line x1="210" y1="210" x2="70" y2="320" class="link" />
+          <line x1="210" y1="210" x2="350" y2="320" class="link" />
+          <line x1="210" y1="70" x2="70" y2="320" class="link link-dim" />
+          <line x1="210" y1="70" x2="350" y2="320" class="link link-dim" />
+
+          <!-- center node: Abhi -->
+          <g class="node node-center">
+            <circle cx="210" cy="210" r="38" />
+            <text x="210" y="216" text-anchor="middle" class="node-label-mono">Abhi</text>
+          </g>
+
+          <!-- Networking node -->
+          <g class="node">
+            <circle cx="210" cy="70" r="30" />
+            <text x="210" y="76" text-anchor="middle" class="node-label-mono">NET</text>
+          </g>
+          <text x="210" y="30" text-anchor="middle" class="node-caption">Networking</text>
+
+          <!-- Python node -->
+          <g class="node">
+            <circle cx="70" cy="320" r="30" />
+            <text x="70" y="326" text-anchor="middle" class="node-label-mono">PY</text>
+          </g>
+          <text x="70" y="368" text-anchor="middle" class="node-caption">Python / Django</text>
+
+          <!-- IT Support node -->
+          <g class="node">
+            <circle cx="350" cy="320" r="30" />
+            <text x="350" y="326" text-anchor="middle" class="node-label-mono">SUP</text>
+          </g>
+          <text x="350" y="368" text-anchor="middle" class="node-caption">IT Support</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECT -->
+  <section id="project" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">01 - Work</p>
+        <h2>What I've built.</h2>
+      </div>
+
+      <div class="project-panel">
+        <div class="project-image">
+          <img src="assets/abhitech-topology.png" alt="AbhiTech Solutions network topology built in Cisco Packet Tracer">
+        </div>
+
+        <div class="project-summary">
+          <p class="project-status status-live">Live on GitHub</p>
+          <h3 class="project-title">AbhiTech Solutions - enterprise LAN build</h3>
+          <p>
+            A full three-tier network I designed and built from scratch in Cisco
+            Packet Tracer as part of my CCNA preparation - modelling a real
+            company across two buildings, seven VLANs, and a complete
+            172.16.0.0/16 VLSM addressing plan.
+          </p>
+          <ul class="project-points">
+            <li>Core / Distribution / Access hierarchical design with HSRP redundancy and per-VLAN load balancing</li>
+            <li>Port security, DHCP snooping, and Dynamic ARP Inspection on every access switch</li>
+            <li>Static NAT for a public-facing web server, PAT for all other internal traffic</li>
+            <li>Guest VLAN fully isolated from the internal LAN via ACLs, internet access only</li>
+            <li>Internal DNS, DHCP, file, and IoT servers, all reachable by hostname</li>
+          </ul>
+          <div class="project-links">
+            <a href="https://github.com/abishek414/Abhitech_LAN" class="btn btn-outline">View on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-stats">
+          <div class="stat">
+            <p class="stat-num">7</p>
+            <p class="stat-label">VLANs</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">2</p>
+            <p class="stat-label">Buildings</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">/16</p>
+            <p class="stat-label">VLSM base</p>
+          </div>
+          <div class="stat">
+            <p class="stat-num">3</p>
+            <p class="stat-label">Tier design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">02 — Skills</p>
+        <h2>What I work with.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card skill-card-primary" data-skill="networking">
+          <p class="skill-tag">net0/1 — primary focus</p>
+          <h3>Networking</h3>
+          <ul>
+            <li>TCP/IP &amp; subnetting</li>
+            <li>VLANs, routing &amp; switching fundamentals</li>
+            <li>HSRP redundancy &amp; load balancing</li>
+            <li>DHCP / DNS basics</li>
+            <li>Network troubleshooting</li>
+            <li>Cisco Packet Tracer - hands-on labs</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-skill="python">
+          <p class="skill-tag">py0/1</p>
+          <h3>Programming &amp; Web</h3>
+          <ul>
+            <li>Python - loops, functions, file handling</li>
+            <li>Django - basic web applications</li>
+            <li>HTML / CSS / JavaScript basics</li>
+          </ul>
+        </div>
+
+        <div class="skill-card" data-skill="support">
+          <p class="skill-tag">sup0/1</p>
+          <h3>IT Support</h3>
+          <ul>
+            <li>Windows &amp; macOS fundamentals</li>
+            <li>Microsoft Office</li>
+            <li>Hardware setup &amp; basic troubleshooting</li>
+            <li>User support fundamentals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section id="background" class="section">
+    <div class="wrap about-grid">
+      <div class="section-head">
+        <p class="eyebrow">03 - Background</p>
+        <h2>Study &amp; certification.</h2>
+      </div>
+      <div class="about-body">
+        <p>
+          I'm completing a Bachelor of Information Technology at Charles Darwin
+          University, graduating November 2026, and preparing for the CCNA
+          200-301 alongside it. My interest in networking started practical
+          and stayed practical - I like the parts you can actually test: does
+          the ping return, does the VLAN pass traffic where it should, does
+          the failover actually fail over.
+        </p>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <h3>Bachelor of Information Technology</h3>
+            <p class="edu-sub">Charles Darwin University - Darwin, NT</p>
+            <p class="edu-date">Expected completion: November 2026</p>
+          </div>
+          <div class="edu-card">
+            <h3>Advanced Diploma of Information Technology</h3>
+            <p class="edu-sub">Southern Academy of Business and Technology - Sydney, NSW</p>
+            <p class="edu-date">Completed 2024</p>
+          </div>
+          <div class="edu-card">
+            <h3>CCNA 200-301</h3>
+            <p class="edu-sub">Cisco Certified Network Associate</p>
+            <p class="edu-date">In progress</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-contact">
+    <div class="wrap contact-inner">
+      <p class="eyebrow">04 - Contact</p>
+      <h2>Let's talk.</h2>
+      <p class="contact-lead">
+        Open to Service IT and graduate opportunities in Darwin and across the NT.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:kandelabishek2@gmail.com" class="contact-link">kandelabishek2@gmail.com</a>
+        <a href="https://linkedin.com/in/abishek-kandel" class="contact-link">LinkedIn</a>
+      </div>
+      <p class="contact-location">Brinkin, NT</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-mono">Darwin, NT</p>
+  </div>
+</footer>
+
+</body>
+</html>
