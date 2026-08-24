@@ -50,40 +50,51 @@
       </div>
 
       <div class="hero-diagram">
-        <svg viewBox="0 0 420 420" class="topology" role="img" aria-label="Diagram connecting Abhi to Networking, Python, and IT Support">
-          <line x1="210" y1="210" x2="210" y2="70" class="link" />
-          <line x1="210" y1="210" x2="70" y2="320" class="link" />
-          <line x1="210" y1="210" x2="350" y2="320" class="link" />
+        <svg viewBox="0 0 420 420" class="topology" role="img" aria-label="Diagram connecting Abhi to Networking, Python, and IT Support — select a node to jump to that skill">
+          <!-- connecting lines -->
+          <line data-link="networking" x1="210" y1="210" x2="210" y2="70" class="link" />
+          <line data-link="python" x1="210" y1="210" x2="70" y2="320" class="link" />
+          <line data-link="support" x1="210" y1="210" x2="350" y2="320" class="link" />
           <line x1="210" y1="70" x2="70" y2="320" class="link link-dim" />
           <line x1="210" y1="70" x2="350" y2="320" class="link link-dim" />
 
+          <!-- traveling packets: continuous ambient motion, no interaction needed -->
+          <circle class="packet" data-line="networking" data-speed="1" data-offset="0" r="4" />
+          <circle class="packet" data-line="python" data-speed="0.8" data-offset="650" r="4" />
+          <circle class="packet" data-line="support" data-speed="1.15" data-offset="1300" r="4" />
+
           <!-- center node: Abhi -->
           <g class="node node-center">
+            <circle class="node-pulse node-pulse-center" cx="210" cy="210" r="38" />
             <circle cx="210" cy="210" r="38" />
             <text x="210" y="216" text-anchor="middle" class="node-label-mono">Abhi</text>
           </g>
 
           <!-- Networking node -->
-          <g class="node">
+          <g class="node node-link" data-skill="networking" tabindex="0" role="link" aria-label="Jump to Networking skills">
+            <circle class="node-pulse" style="animation-delay: 0s;" cx="210" cy="70" r="30" />
             <circle cx="210" cy="70" r="30" />
             <text x="210" y="76" text-anchor="middle" class="node-label-mono">NET</text>
           </g>
           <text x="210" y="30" text-anchor="middle" class="node-caption">Networking</text>
 
           <!-- Python node -->
-          <g class="node">
+          <g class="node node-link" data-skill="python" tabindex="0" role="link" aria-label="Jump to Programming and Web skills">
+            <circle class="node-pulse" style="animation-delay: 0.7s;" cx="70" cy="320" r="30" />
             <circle cx="70" cy="320" r="30" />
             <text x="70" y="326" text-anchor="middle" class="node-label-mono">PY</text>
           </g>
           <text x="70" y="368" text-anchor="middle" class="node-caption">Python / Django</text>
 
           <!-- IT Support node -->
-          <g class="node">
+          <g class="node node-link" data-skill="support" tabindex="0" role="link" aria-label="Jump to IT Support skills">
+            <circle class="node-pulse" style="animation-delay: 1.4s;" cx="350" cy="320" r="30" />
             <circle cx="350" cy="320" r="30" />
             <text x="350" y="326" text-anchor="middle" class="node-label-mono">SUP</text>
           </g>
           <text x="350" y="368" text-anchor="middle" class="node-caption">IT Support</text>
         </svg>
+        <p class="hero-diagram-hint">Select a node to jump to that skill</p>
       </div>
     </div>
   </section>
@@ -97,8 +108,18 @@
       </div>
 
       <div class="project-panel">
-        <div class="project-image">
-          <img src="assets/abhitech-topology.png" alt="AbhiTech Solutions network topology built in Cisco Packet Tracer">
+                <div class="project-image" data-topology-container>
+          <button type="button" class="topology-toggle" data-topology-toggle aria-expanded="false" aria-controls="topology-diagram">
+            <svg class="topology-toggle-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 7.5L10 12.5L15 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="topology-toggle-label">Show topology diagram</span>
+          </button>
+          <div class="topology-collapse">
+            <div class="topology-collapse-inner">
+              <img id="topology-diagram" src="assets/abhitech-topology.png" alt="AbhiTech Solutions network topology built in Cisco Packet Tracer">
+            </div>
+          </div>
         </div>
 
         <div class="project-summary">
@@ -115,7 +136,7 @@
             <li>Port security, DHCP snooping, and Dynamic ARP Inspection on every access switch</li>
             <li>Static NAT for a public-facing web server, PAT for all other internal traffic</li>
             <li>Guest VLAN fully isolated from the internal LAN via ACLs, internet access only</li>
-            <li>Internal DNS, DHCP, file, and IoT servers, all reachable by hostname</li>
+            <li>Internal DNS, DHCP, file, and IoT servers</li>
           </ul>
           <div class="project-links">
             <a href="https://github.com/abishek414/Abhitech_LAN" class="btn btn-outline">View on GitHub</a>
@@ -124,8 +145,8 @@
 
         <div class="project-stats">
           <div class="stat">
-            <p class="stat-num">7</p>
-            <p class="stat-label">VLANs</p>
+            <p class="stat-num">6</p>
+            <p class="stat-label">Departments</p>
           </div>
           <div class="stat">
             <p class="stat-num">2</p>

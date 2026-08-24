@@ -258,6 +258,171 @@ a {
   .hero-actions .btn { text-align: center; }
   .hero-diagram { max-width: 280px; }
 }
+/* Hero diagram: full motion + click-to-navigate nodes */
+.packet {
+  fill: var(--signal);
+  filter: drop-shadow(0 0 4px rgba(79, 209, 197, 0.8));
+}
+@media (prefers-reduced-motion: reduce) {
+  .packet { display: none; }
+}
+
+.hero-diagram-hint {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: 4px 0 0;
+}
+
+.node-link {
+  cursor: pointer;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.node-link:hover,
+.node-link:focus-visible {
+  transform: scale(1.08);
+}
+.node-link:hover circle:not(.node-pulse),
+.node-link:focus-visible circle:not(.node-pulse) {
+  stroke: var(--accent);
+  fill: var(--surface-2);
+}
+.node-link:focus,
+.node-link:focus-visible {
+  outline: none;
+}
+.node-link:focus-visible circle:not(.node-pulse) {
+  filter: drop-shadow(0 0 8px var(--accent));
+}
+
+/* gentle glow pulse on the center node's solid circle */
+.node-center circle:not(.node-pulse) {
+  animation: pulse 3.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(242, 166, 90, 0)); }
+  50% { filter: drop-shadow(0 0 10px rgba(242, 166, 90, 0.45)); }
+}
+
+/* continuous "flowing" ring inside each node */
+.node-pulse {
+  fill: none;
+  stroke: var(--signal);
+  stroke-width: 1.5;
+  opacity: 0.6;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: node-ping 2.6s ease-out infinite;
+  pointer-events: none;
+}
+.node-pulse-center { stroke: var(--accent); }
+@keyframes node-ping {
+  0% { transform: scale(1); opacity: 0.55; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .node-center circle:not(.node-pulse) { animation: none; }
+  .node-pulse { animation: none; opacity: 0; }
+}
+
+/* Topology screenshot: hidden until opened, closes on tab/window blur */
+.topology-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.topology-toggle:hover,
+.topology-toggle:focus-visible {
+  border-color: var(--signal);
+  color: var(--signal);
+}
+.topology-toggle:focus-visible {
+  outline: 2px solid var(--signal);
+  outline-offset: 2px;
+}
+.topology-toggle-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.project-image.is-open .topology-toggle-icon {
+  transform: rotate(180deg);
+}
+.topology-toggle-label { flex: 1; text-align: left; }
+
+.topology-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  margin-top: 0;
+  transition: grid-template-rows 0.4s ease, margin-top 0.4s ease;
+}
+.project-image.is-open .topology-collapse {
+  grid-template-rows: 1fr;
+  margin-top: 20px;
+}
+.topology-collapse-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .topology-collapse { transition: none; }
+}
+
+/* Card hover lift — mouse/trackpad only; touch gets a tap response instead
+   so nothing gets stuck "hovered" on mobile */
+.project-card,
+.skill-card,
+.edu-card {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-card:hover,
+  .skill-card:hover,
+  .edu-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--signal);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+  }
+  .skill-card-primary:hover {
+    border-color: var(--signal);
+  }
+}
+
+@media (hover: none) {
+  .project-card:active,
+  .skill-card:active,
+  .edu-card:active {
+    transform: scale(0.98);
+    border-color: var(--signal);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .skill-card,
+  .edu-card {
+    transition: none;
+  }
+}
 
 /*  Sections (shared)*/
 .section {
