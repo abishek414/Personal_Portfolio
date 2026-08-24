@@ -51,6 +51,11 @@
 
       <div class="hero-diagram">
         <svg viewBox="0 0 420 420" class="topology" role="img" aria-label="Diagram connecting Abhi to Networking, Python, and IT Support — select a node to jump to that skill">
+          <defs>
+           <clipPath id="avatar-clip">
+            <circle cx="210" cy="210" r="48" />
+           </clipPath>
+          </defs>
           <!-- connecting lines -->
           <line data-link="networking" x1="210" y1="210" x2="210" y2="70" class="link" />
           <line data-link="python" x1="210" y1="210" x2="70" y2="320" class="link" />
@@ -65,9 +70,11 @@
 
           <!-- center node: Abhi -->
           <g class="node node-center">
-            <circle class="node-pulse node-pulse-center" cx="210" cy="210" r="38" />
-            <circle cx="210" cy="210" r="38" />
-            <text x="210" y="216" text-anchor="middle" class="node-label-mono">Abhi</text>
+           <circle class="node-pulse node-pulse-center" cx="210" cy="210" r="48" />
+            <g class="node-center-spin">
+             <image href="assets/profile-photo.jpeg" x="162" y="162" width="96" height="96" clip-path="url(#avatar-clip)" preserveAspectRatio="xMidYMid slice" />
+             <circle cx="210" cy="210" r="48" />
+            </g>
           </g>
 
           <!-- Networking node -->

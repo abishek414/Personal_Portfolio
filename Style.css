@@ -230,10 +230,22 @@ a {
   stroke-width: 1.5;
 }
 .node-center circle:not(.node-pulse) {
-  fill: var(--accent);
+  fill: none;
   stroke: var(--accent);
 }
 .node-center .node-label-mono { fill: #1A1206; font-size: 12px; }
+.node-center-spin {
+  transform-box: view-box;
+  transform-origin: 210px 210px;
+  animation: node-center-spin 14s linear infinite;
+}
+@keyframes node-center-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .node-center-spin { animation: none; }
+}
 
 .node-label-mono {
   font-family: var(--font-mono);
