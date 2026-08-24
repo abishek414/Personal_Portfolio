@@ -479,7 +479,11 @@ a {
   color: var(--signal);
   border-color: var(--signal);
 }
-
+.project-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
 @media (max-width: 860px) {
   .project-grid { grid-template-columns: 1fr; }
 }
