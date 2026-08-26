@@ -95,38 +95,39 @@
   // of the "Show topology diagram" button. It auto-closes again as soon as
   // the tab/window loses focus.
   function wireTopologyToggle() {
-    var container = document.querySelector('[data-topology-container]');
-    if (!container) return;
+    var containers = document.querySelectorAll('[data-topology-container]');
 
-    var toggleBtn = container.querySelector('[data-topology-toggle]');
-    var labelEl = container.querySelector('.topology-toggle-label');
-    if (!toggleBtn) return;
+    containers.forEach(function (container) {
+      var toggleBtn = container.querySelector('[data-topology-toggle]');
+      var labelEl = container.querySelector('.topology-toggle-label');
+      if (!toggleBtn) return;
 
-    function openTopology() {
-      container.classList.add('is-open');
-      toggleBtn.setAttribute('aria-expanded', 'true');
-      if (labelEl) labelEl.textContent = 'Hide topology diagram';
-    }
-
-    function closeTopology() {
-      if (!container.classList.contains('is-open')) return;
-      container.classList.remove('is-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      if (labelEl) labelEl.textContent = 'Show topology diagram';
-    }
-
-    toggleBtn.addEventListener('click', function () {
-      if (container.classList.contains('is-open')) {
-        closeTopology();
-      } else {
-        openTopology();
+      function openTopology() {
+        container.classList.add('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        if (labelEl) labelEl.textContent = 'Hide topology diagram';
       }
-    });
 
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) closeTopology();
-    });
+      function closeTopology() {
+        if (!container.classList.contains('is-open')) return;
+        container.classList.remove('is-open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        if (labelEl) labelEl.textContent = 'Show topology diagram';
+      }
 
-    window.addEventListener('blur', closeTopology);
+      toggleBtn.addEventListener('click', function () {
+        if (container.classList.contains('is-open')) {
+          closeTopology();
+        } else {
+          openTopology();
+        }
+      });
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) closeTopology();
+      });
+
+      window.addEventListener('blur', closeTopology);
+    });
   }
 })();

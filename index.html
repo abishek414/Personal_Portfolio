@@ -107,16 +107,17 @@
   </section>
 
   <!-- FEATURED PROJECT -->
-  <section id="project" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="eyebrow">01 - Work</p>
-        <h2>What I've built.</h2>
-      </div>
+<section id="project" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">01 — Work</p>
+      <h2>What I've built.</h2>
+    </div>
 
-      <div class="project-panel">
-                <div class="project-image" data-topology-container>
-          <button type="button" class="topology-toggle" data-topology-toggle aria-expanded="false" aria-controls="topology-diagram">
+    <div class="project-grid">
+      <div class="project-card project-card-featured">
+        <div class="project-image project-image-compact" data-topology-container>
+          <button type="button" class="topology-toggle" data-topology-toggle aria-expanded="false" aria-controls="topology-diagram-abhitech">
             <svg class="topology-toggle-icon" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M5 7.5L10 12.5L15 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -124,76 +125,79 @@
           </button>
           <div class="topology-collapse">
             <div class="topology-collapse-inner">
-              <img id="topology-diagram" src="assets/abhitech-topology.png" alt="AbhiTech Solutions network topology built in Cisco Packet Tracer">
+              <img id="topology-diagram-abhitech" src="assets/abhitech-topology.png" alt="AbhiTech Solutions network topology built in Cisco Packet Tracer">
             </div>
           </div>
         </div>
 
-        <div class="project-summary">
-          <p class="project-status status-live">Live on GitHub</p>
-          <h3 class="project-title">AbhiTech Solutions - enterprise LAN build</h3>
-          <p>
-            A full three-tier network I designed and built from scratch in Cisco
-            Packet Tracer as part of my CCNA preparation - modelling a real
-            company across two buildings, seven VLANs, and a complete
-            172.16.0.0/16 VLSM addressing plan.
-          </p>
-          <ul class="project-points">
-            <li>Core / Distribution / Access hierarchical design with HSRP redundancy and per-VLAN load balancing</li>
-            <li>Port security, DHCP snooping, and Dynamic ARP Inspection on every access switch</li>
-            <li>Static NAT for a public-facing web server, PAT for all other internal traffic</li>
-            <li>Guest VLAN fully isolated from the internal LAN via ACLs, internet access only</li>
-            <li>Internal DNS, DHCP, file, and IoT servers</li>
-          </ul>
-          <div class="project-links">
-            <a href="https://github.com/abishek414/Abhitech_LAN" class="btn btn-outline">View on GitHub</a>
+        <p class="project-status status-live">Live</p>
+        <h3>AbhiTech Solutions - Enterprise LAN build</h3>
+        <p class="project-card-desc">
+          A three-tier enterprise LAN built in Cisco Packet Tracer for my
+          CCNA prep, modelling a real company across two buildings.
+        </p>
+        <ul class="project-points project-points-compact">
+          <li>Core / Distribution / Access hierarchy with HSRP redundancy</li>
+          <li>Port security, DHCP snooping, and Dynamic ARP Inspection</li>
+          <li>Static NAT and PAT, with a fully isolated guest VLAN</li>
+        </ul>
+        <a href="https://github.com/abishek414/Abhitech_LAN" class="project-card-link">View on GitHub ></a>
+      </div>
+
+      <div class="project-card project-card-featured">
+        <div class="project-image project-image-compact" data-topology-container>
+          <button type="button" class="topology-toggle" data-topology-toggle aria-expanded="false" aria-controls="topology-diagram-schools">
+            <svg class="topology-toggle-icon" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M5 7.5L10 12.5L15 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="topology-toggle-label">Show topology diagram</span>
+          </button>
+          <div class="topology-collapse">
+            <div class="topology-collapse-inner">
+              <img id="topology-diagram-schools" src="assets/nt-schools-topology.png" alt="Multi-school WAN topology built in Cisco Packet Tracer">
+            </div>
           </div>
         </div>
 
-        <div class="project-stats">
-          <div class="stat">
-            <p class="stat-num">6</p>
-            <p class="stat-label">Departments</p>
-          </div>
-          <div class="stat">
-            <p class="stat-num">2</p>
-            <p class="stat-label">Buildings</p>
-          </div>
-          <div class="stat">
-            <p class="stat-num">/16</p>
-            <p class="stat-label">VLSM base</p>
-          </div>
-          <div class="stat">
-            <p class="stat-num">3</p>
-            <p class="stat-label">Tier design</p>
-          </div>
-        </div>
+        <p class="project-status status-live">Live</p>
+        <h3>Multi-school WAN build</h3>
+        <p class="project-card-desc">
+          A Packet Tracer lab connecting several school campuses to a
+          central office over secure site-to-site tunnels.
+        </p>
+        <ul class="project-points project-points-compact">
+          <li>GRE over IPsec tunnels between every campus and the central office</li>
+          <li>OSPF routing running across the GRE tunnels</li>
+          <li>Secure Remote login only by Admin from  headquarter</li>
+        </ul>
+        <a href="https://github.com/abishek414/NT_Schools_LAN" class="project-card-link">View on GitHub -></a>
       </div>
-      <div class="project-grid">
-        <div class="project-card">
-          <p class="project-status status-live">Live</p>
-          <h3>This portfolio site</h3>
-          <p class="project-card-desc">
-            The site you're on right now - hand-built with HTML, CSS, and
-            vanilla JavaScript, hosted on GitHub Pages.
-          </p>
-          <a href="https://github.com/abishek414/Personal_Portfolio" class="project-card-link">View on GitHub > </a>
-        </div>
-      
-       <div class="project-card">
+
+      <div class="project-card">
+        <p class="project-status status-live">Live</p>
+        <h3>This portfolio site</h3>
+        <p class="project-card-desc">
+          The site you're on right now - hand-built with HTML, CSS, and
+          vanilla JavaScript, hosted on GitHub Pages.
+        </p>
+        <a href="https://github.com/abishek414/Personal_Portfolio" class="project-card-link">View on GitHub -></a>
+      </div>
+
+      <div class="project-card">
         <p class="project-status status-live">Live</p>
         <h3>Django project</h3>
         <p class="project-card-desc">
-          A Python/Django web application, building on the fundamentals
-          listed under Programming &amp; Web.
+          A Django-based inventory management system for tracking stock -
+          built with Python, Django, and a relational database, with full CRUD
+          functionality for managing products, their location and stock records.
         </p>
-      <div class="project-card-links">
-       <a href="https://github.com/abishek414/Inventory_Management_System" class="project-card-link">View on GitHub ></a>
-       <a href="https://inventorymanagement.pythonanywhere.com" class="project-card-link" target="_blank" rel="noopener noreferrer">View Live Demo > </a>
+        <div class="project-card-links">
+          <a href="https://github.com/abishek414/Inventory_Management_System" class="project-card-link">View on GitHub -></a>
+          <a href="https://inventorymanagement.pythonanywhere.com" class="project-card-link" target="_blank" rel="noopener noreferrer">View Live Demo -></a>
+        </div>
       </div>
     </div>
   </div>
- </div>
 </section>
 
   <!-- SKILLS -->
