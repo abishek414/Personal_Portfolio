@@ -795,4 +795,11 @@ a {
   color: var(--text-faint);
   font-size: 13px;
 }
-.footer-mono { font-family: var(--font-mono); }
+.footer-mono {
+  transition: color 0.15s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .footer-mono:hover {
+    color: var(--accent);
+  }
+}
