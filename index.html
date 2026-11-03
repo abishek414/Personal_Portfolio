@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abishek Kandel - IT . Networking . Python</title>
-<meta name="description" content="Abishek Kandel - Networking-focused IT student in Darwin, NT, building on Cisco networking with Python and Django.">
+<title>Abishek Kandel - Networking . Server Admin . IT Support</title>
+<meta name="description" content="Abishek Kandel - Cisco CCNA certified IT graduate in Darwin, NT, focused on networking, server administration and IT support. Seeking an internship or junior IT role.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-<meta property="og:title" content="Abishek Kandel - Cisco CCNA certified IT student">
-<meta property="og:description" content="Networking and security-focused IT student in Darwin, NT.">
+<meta property="og:title" content="Abishek Kandel - Networking, Server Admin & IT Support">
+<meta property="og:description" content="CCNA certified IT graduate in Darwin, NT, focused on networking, server administration and IT support. Seeking an internship or junior IT role.">
 <meta property="og:image" content="https://abhikandel.com/assets/og-image.png">
 <meta property="og:url" content="https://abhikandel.com/">
 </head>
@@ -19,12 +19,28 @@
 
 <div class="noise"></div>
 
+<!-- floating background: soft glows and drifting network nodes -->
+<div class="bg-float" aria-hidden="true">
+  <span class="orb orb-1"></span>
+  <span class="orb orb-2"></span>
+  <span class="orb orb-3"></span>
+  <span class="float-dot d1"></span>
+  <span class="float-dot d2"></span>
+  <span class="float-dot d3"></span>
+  <span class="float-dot d4"></span>
+  <span class="float-dot d5"></span>
+  <span class="float-dot d6"></span>
+  <span class="float-dot d7"></span>
+  <span class="float-dot d8"></span>
+</div>
+
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="#top" class="brand">Abishek Kandel<span class="brand-dot">.</span></a>
     <nav class="nav">
       <a href="#project">Work</a>
       <a href="#skills">Skills</a>
+      <a href="#approach">Approach</a>
       <a href="#background">Background</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -38,23 +54,25 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">Networking-focused IT student - Darwin, NT</p>
-        <h1>I design networks.<br>Then I write the <span class="accent">code</span><br>that supports them.</h1>
+        <p class="eyebrow">Networking &middot; Server Admin &middot; IT Support - Darwin, NT</p>
+        <h1>CCNA certified.<br>Lab tested.<br>Ready for my first <span class="accent">IT role</span>.</h1>
         <p class="hero-lead">
-          Bachelor of IT student at Charles Darwin University and Cisco CCNA
-          certified. Networking is where I focus: VLANs, routing, redundancy,
-          and security. I build with Python and Django too, and I'm aiming
-          for network and systems administration roles where I can bring the
-          two together through automation.
+          Bachelor of IT graduate from Charles Darwin University and Cisco
+          CCNA certified. My hands-on experience comes from labs and study
+          projects, where I've designed switched and routed networks and built a
+          hybrid server lab with virtual machines on-premises and in Azure,
+          secured at both the network and server level. I'm looking for an internship or junior role in IT
+          support, networking or systems administration, where I can learn
+          quickly from an experienced team.
         </p>
         <div class="hero-actions">
-          <a href="#project" class="btn btn-primary">See my network build</a>
+          <a href="#project" class="btn btn-primary">See my network builds</a>
           <a href="resume.html" class="btn btn-outline">Download resume</a>
         </div>
       </div>
 
       <div class="hero-diagram">
-        <svg viewBox="0 0 420 420" class="topology" role="img" aria-label="Diagram connecting Abhi to Networking, Python, and IT Support - select a node to jump to that skill">
+        <svg viewBox="0 0 420 420" class="topology" role="img" aria-label="Diagram connecting Abhi to Networking, Server Admin, and IT Support - select a node to jump to that skill">
           <defs>
            <clipPath id="avatar-clip">
             <circle cx="210" cy="210" r="48" />
@@ -62,14 +80,14 @@
           </defs>
           <!-- connecting lines -->
           <line data-link="networking" x1="210" y1="210" x2="210" y2="70" class="link" />
-          <line data-link="python" x1="210" y1="210" x2="70" y2="320" class="link" />
+          <line data-link="servers" x1="210" y1="210" x2="70" y2="320" class="link" />
           <line data-link="support" x1="210" y1="210" x2="350" y2="320" class="link" />
           <line x1="210" y1="70" x2="70" y2="320" class="link link-dim" />
           <line x1="210" y1="70" x2="350" y2="320" class="link link-dim" />
 
           <!-- traveling packets: continuous ambient motion, no interaction needed -->
           <circle class="packet" data-line="networking" data-speed="1" data-offset="0" r="4" />
-          <circle class="packet" data-line="python" data-speed="0.8" data-offset="650" r="4" />
+          <circle class="packet" data-line="servers" data-speed="0.8" data-offset="650" r="4" />
           <circle class="packet" data-line="support" data-speed="1.15" data-offset="1300" r="4" />
 
           <!-- center node: Abhi -->
@@ -89,13 +107,13 @@
           </g>
           <text x="210" y="30" text-anchor="middle" class="node-caption">Networking</text>
 
-          <!-- Python node -->
-          <g class="node node-link" data-skill="python" tabindex="0" role="link" aria-label="Jump to Programming and Web skills">
+          <!-- Server Admin node -->
+          <g class="node node-link" data-skill="servers" tabindex="0" role="link" aria-label="Jump to Server and Systems Administration skills">
             <circle class="node-pulse" style="animation-delay: 0.7s;" cx="70" cy="320" r="30" />
             <circle cx="70" cy="320" r="30" />
-            <text x="70" y="326" text-anchor="middle" class="node-label-mono">PY</text>
+            <text x="70" y="326" text-anchor="middle" class="node-label-mono">SRV</text>
           </g>
-          <text x="70" y="368" text-anchor="middle" class="node-caption">Python / Django</text>
+          <text x="70" y="368" text-anchor="middle" class="node-caption">Server Admin</text>
 
           <!-- IT Support node -->
           <g class="node node-link" data-skill="support" tabindex="0" role="link" aria-label="Jump to IT Support skills">
@@ -110,7 +128,7 @@
     </div>
   </section>
 
-  <!-- FEATURED PROJECT -->
+  <!-- FEATURED PROJECTS -->
 <section id="project" class="section">
   <div class="wrap">
     <div class="section-head">
@@ -134,18 +152,19 @@
           </div>
         </div>
 
-        <p class="project-status status-live">Live</p>
+        <p class="project-status status-live">Enterprise LAN</p>
         <h3>AbhiTech Solutions - Enterprise LAN build</h3>
         <p class="project-card-desc">
-          A three-tier enterprise LAN built in Cisco Packet Tracer for my
-          CCNA prep, modelling a real company across two buildings.
+          A three-tier enterprise LAN lab built in Cisco Packet Tracer, modelling
+          a company across two buildings, designed so a single failed link
+          or device doesn't take the business offline.
         </p>
         <ul class="project-points project-points-compact">
-          <li>Core / Distribution / Access hierarchy with HSRP redundancy</li>
-          <li>Port security, DHCP snooping, and Dynamic ARP Inspection</li>
+          <li>Core / Distribution / Access hierarchy with HSRP gateway redundancy</li>
+          <li>Layer 2 hardening: port security, DHCP snooping and Dynamic ARP Inspection</li>
           <li>Static NAT and PAT, with a fully isolated guest VLAN</li>
         </ul>
-        <a href="https://github.com/abishek414/Abhitech_LAN" class="project-card-link">View on GitHub ></a>
+        <a href="https://github.com/abishek414/Abhitech_LAN" class="project-card-link">View on GitHub -></a>
       </div>
 
       <div class="project-card project-card-featured">
@@ -163,37 +182,29 @@
           </div>
         </div>
 
-        <p class="project-status status-live">Live</p>
+        <p class="project-status status-live">WAN &amp; VPN</p>
         <h3>Multi-school WAN build</h3>
         <p class="project-card-desc">
-          A Packet Tracer lab connecting several school campuses to a
-          central office over secure site-to-site tunnels.
+          A Packet Tracer lab connecting several school campuses to a central
+          office over encrypted site-to-site tunnels, so every campus can reach
+          central services securely.
         </p>
         <ul class="project-points project-points-compact">
           <li>GRE over IPsec tunnels between every campus and the central office</li>
-          <li>OSPF routing running across the GRE tunnels</li>
-          <li>Secure Remote login only by Admin from  headquarter</li>
+          <li>OSPF dynamic routing running across the GRE tunnels</li>
+          <li>Remote device management restricted to admins at headquarters</li>
         </ul>
         <a href="https://github.com/abishek414/NT_Schools_LAN" class="project-card-link">View on GitHub -></a>
       </div>
 
       <div class="project-card">
-        <p class="project-status status-live">Live</p>
-        <h3>This portfolio site</h3>
+        <p class="project-status status-live">Systems &amp; Access Control</p>
+        <h3>Inventory Management System</h3>
         <p class="project-card-desc">
-          The site you're on right now - hand-built with HTML, CSS, and
-          vanilla JavaScript, hosted on GitHub Pages.
-        </p>
-        <a href="https://github.com/abishek414/Personal_Portfolio" class="project-card-link">View on GitHub -></a>
-      </div>
-
-      <div class="project-card">
-        <p class="project-status status-live">Live</p>
-        <h3>Django project</h3>
-        <p class="project-card-desc">
-          A Django-based inventory management system for tracking stock -
-          built with Python, Django, and a relational database, with full CRUD
-          functionality for managing products, their location and stock records.
+          A multi-organization inventory system for tracking equipment, stock
+          and who has borrowed what, with role-based permissions so each user
+          can only see and change what their role allows. Built in Python and
+          Django with a relational database.
         </p>
         <div class="project-card-links">
           <a href="https://github.com/abishek414/Inventory_Management_System" class="project-card-link">View on GitHub -></a>
@@ -210,29 +221,33 @@
       <div class="section-head">
         <p class="eyebrow">02 - Skills</p>
         <h2>What I work with.</h2>
+        <p class="section-note">All built, configured and tested in hands-on labs and study projects.</p>
       </div>
 
       <div class="skills-grid">
         <div class="skill-card skill-card-primary" data-skill="networking">
-          <p class="skill-tag">net0/1 -primary focus</p>
+          <p class="skill-tag">net0/1 - primary focus</p>
           <h3>Networking</h3>
           <ul>
-            <li>TCP/IP &amp; subnetting</li>
-            <li>VLANs, routing &amp; switching fundamentals</li>
-            <li>HSRP redundancy &amp; load balancing</li>
-            <li>DHCP / DNS basics</li>
-            <li>Network troubleshooting</li>
-            <li>Cisco Packet Tracer - hands-on labs</li>
+            <li>TCP/IP, subnetting &amp; VLANs</li>
+            <li>Routing &amp; switching, OSPF</li>
+            <li>HSRP redundancy &amp; failover</li>
+            <li>Port security, DHCP snooping, DAI</li>
+            <li>Site-to-site VPN (GRE over IPsec)</li>
+            <li>NAT / PAT &amp; network troubleshooting</li>
           </ul>
         </div>
 
-        <div class="skill-card" data-skill="python">
-          <p class="skill-tag">py0/1</p>
-          <h3>Programming &amp; Web</h3>
+        <div class="skill-card" data-skill="servers">
+          <p class="skill-tag">srv0/1</p>
+          <h3>Server &amp; Systems Admin</h3>
           <ul>
-            <li>Python - loops, functions, file handling</li>
-            <li>Django - basic web applications</li>
-            <li>HTML / CSS / JavaScript basics</li>
+            <li>Windows Server on virtual machines</li>
+            <li>DHCP &amp; DNS services</li>
+            <li>Group Policy (on-premises lab)</li>
+            <li>Hybrid setup: on-premises &amp; Azure VMs</li>
+            <li>User accounts &amp; access permissions</li>
+            <li>Role-based access control</li>
           </ul>
         </div>
 
@@ -240,11 +255,55 @@
           <p class="skill-tag">sup0/1</p>
           <h3>IT Support</h3>
           <ul>
-            <li>Windows &amp; macOS fundamentals</li>
+            <li>Windows OS installation &amp; setup</li>
+            <li>Windows &amp; macOS troubleshooting</li>
             <li>Microsoft Office</li>
-            <li>Windows Server</li>
             <li>Hardware setup &amp; basic troubleshooting</li>
-            <li>User support fundamentals</li>
+            <li>Troubleshooting network &amp; internet problems</li>
+            <li>Explaining tech issues in simple terms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH: how networks and servers fit together -->
+  <section id="approach" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">03 - Approach</p>
+        <h2>How networks and servers fit together.</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card skill-card-primary">
+          <p class="skill-tag">layer 1-3</p>
+          <h3>A server is only as good as its network</h3>
+          <ul>
+            <li>Users reach servers through DNS, DHCP, VLANs and routing - if any one fails, the server looks "down" even when it's running.</li>
+            <li>That's why I troubleshoot from the network up: cable, IP, gateway, DNS, then the server.</li>
+            <li>Redundancy like HSRP keeps services available when a link or switch fails.</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-tag">network &amp; server</p>
+          <h3>Protecting the network and the server</h3>
+          <ul>
+            <li>Separate guest devices from servers with VLANs.</li>
+            <li>Harden switch ports with port security, DHCP snooping and DAI.</li>
+            <li>Encrypt site-to-site traffic and limit remote management to admins.</li>
+            <li>Give user accounts only the permissions they need.</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <p class="skill-tag">people first</p>
+          <h3>Support is where it all comes together</h3>
+          <ul>
+            <li>My labs taught me to work out whether a problem is the device, the network or the server.</li>
+            <li>Understanding the whole path helps find the cause faster and explain it simply.</li>
+            <li>Good IT should be reliable and easy for people to use.</li>
           </ul>
         </div>
       </div>
@@ -252,26 +311,28 @@
   </section>
 
   <!-- BACKGROUND -->
-  <section id="background" class="section">
+  <section id="background" class="section section-alt">
     <div class="wrap about-grid">
       <div class="section-head">
-        <p class="eyebrow">03 - Background</p>
+        <p class="eyebrow">04 - Background</p>
         <h2>Study &amp; certification.</h2>
       </div>
       <div class="about-body">
         <p>
-          I'm completing a Bachelor of Information Technology at Charles Darwin
-          University (graduating November 2026) and hold the Cisco CCNA. I'm most
-          interested in network and systems administration and in security, and I
-          like work where the result can be tested: the ping returns, the VLAN
-          passes traffic, the failover actually fails over.
+          I've completed a Bachelor of Information Technology at Charles Darwin
+          University and hold the Cisco CCNA. I'm
+          most interested in network and systems administration and IT support.
+          My experience so far is hands-on lab work, and I pick up new tools and
+          systems quickly. I like work where the result can be tested:
+          the ping returns, the VLAN passes traffic, the failover actually fails
+          over, and the user can get back to work.
         </p>
 
         <div class="edu-grid">
           <div class="edu-card">
             <h3>Bachelor of Information Technology</h3>
             <p class="edu-sub">Charles Darwin University - Darwin, NT</p>
-            <p class="edu-date">Expected completion: November 2026</p>
+            <p class="edu-date">Completed 2026</p>
           </div>
           <div class="edu-card">
             <h3>Advanced Diploma of Information Technology</h3>
@@ -294,14 +355,16 @@
   <!-- CONTACT -->
   <section id="contact" class="section section-contact">
     <div class="wrap contact-inner">
-      <p class="eyebrow">04 - Contact</p>
+      <p class="eyebrow">05 - Contact</p>
       <h2>Let's talk.</h2>
       <p class="contact-lead">
-        Open to Service IT and graduate opportunities in Darwin and across the NT.
+        Looking for an internship or junior role in IT support, service desk,
+        networking or systems administration in Darwin and across the NT.
+        I learn fast and I'm ready to start.
       </p>
       <div class="contact-links">
         <a href="mailto:kandelabishek2@gmail.com" class="contact-link">kandelabishek2@gmail.com</a>
-        <a href="https://linkedin.com/in/abishek-kandel" class="contact-link">LinkedIn</a>
+        <a href="https://linkedin.com/in/abishek-kandel" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
       <p class="contact-location">Brinkin, NT</p>
     </div>
